@@ -66,7 +66,7 @@ export default function TaxonomyPage() {
   }
 
   const inputCls =
-    "w-full border border-ink/20 bg-transparent px-3 py-2.5 text-sm outline-none focus:border-vermilion dark:border-cream/20";
+    "w-full border border-ink/20 bg-transparent px-3 py-2.5 text-sm outline-none focus:border-accent dark:border-cream/20";
 
   return (
     <div className="mx-auto max-w-5xl">
@@ -77,7 +77,7 @@ export default function TaxonomyPage() {
         Chuyên mục là cấu trúc chính (mỗi bài một chuyên mục). Thẻ dùng để gắn nhãn tự do (nhiều thẻ mỗi bài).
       </p>
 
-      {error && <p className="mb-6 border border-vermilion/40 bg-vermilion/5 p-3 text-sm text-vermilion">{error}</p>}
+      {error && <p className="mb-6 border border-accent/40 bg-accent/5 p-3 text-sm text-accent">{error}</p>}
 
       <div className="grid gap-10 lg:grid-cols-2">
         <section>
@@ -98,7 +98,7 @@ export default function TaxonomyPage() {
               onChange={(e) => setCatDesc(e.target.value)}
               className={inputCls}
             />
-            <button className="bg-ink px-4 py-2 text-xs font-medium text-paper transition-colors hover:bg-vermilion dark:bg-paper dark:text-ink dark:hover:bg-vermilion dark:hover:text-paper">
+            <button className="bg-ink px-4 py-2 text-xs font-medium text-paper transition-colors hover:bg-accent dark:bg-paper dark:text-ink dark:hover:bg-accent dark:hover:text-paper">
               + Thêm chuyên mục
             </button>
           </form>
@@ -111,7 +111,7 @@ export default function TaxonomyPage() {
                     /{c.slug} · {c.post_count} bài
                   </span>
                 </div>
-                <button onClick={() => removeCategory(c)} className="link-sweep text-xs text-ink-faint hover:text-vermilion dark:text-cream-faint">
+                <button onClick={() => removeCategory(c)} className="link-sweep text-xs text-ink-faint hover:text-accent dark:text-cream-faint">
                   Xoá
                 </button>
               </li>
@@ -130,7 +130,7 @@ export default function TaxonomyPage() {
               onChange={(e) => setTagName(e.target.value)}
               className={inputCls}
             />
-            <button className="shrink-0 bg-ink px-4 py-2 text-xs font-medium text-paper transition-colors hover:bg-vermilion dark:bg-paper dark:text-ink dark:hover:bg-vermilion dark:hover:text-paper">
+            <button className="shrink-0 bg-ink px-4 py-2 text-xs font-medium text-paper transition-colors hover:bg-accent dark:bg-paper dark:text-ink dark:hover:bg-accent dark:hover:text-paper">
               + Thêm
             </button>
           </form>
@@ -143,7 +143,7 @@ export default function TaxonomyPage() {
                 <button
                   onClick={() => removeTag(t)}
                   aria-label={`Xoá thẻ ${t.name}`}
-                  className="text-ink-faint transition-colors hover:text-vermilion dark:text-cream-faint"
+                  className="text-ink-faint transition-colors hover:text-accent dark:text-cream-faint"
                 >
                   ✕
                 </button>

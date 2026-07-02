@@ -88,7 +88,7 @@ src/
 
 ## 5. Theming & design system
 
-- Token màu định nghĩa một nơi tại `@theme` trong `globals.css` (paper/ink/vermilion + biến thể night cho dark).
+- Token màu định nghĩa một nơi tại `@theme` trong `globals.css` — palette **navy trên giấy lạnh**: paper/ink/accent + biến thể night cho dark. Riêng `--color-accent` được override sáng hơn trong `.dark` để giữ độ tương phản trên nền navy-đen.
 - Dark mode: class `dark` trên `<html>`, đặt **trước first paint** bằng inline script đọc localStorage → không flash.
 - Font biến CSS (`--font-fraunces`…) phải gắn trên `<html>` (không phải body) để Tailwind `@theme` resolve được tại `:root`.
 - Chuyển động: keyframe `rise-in` với stagger class `.rise-1..5`; tắt hoàn toàn khi `prefers-reduced-motion`.

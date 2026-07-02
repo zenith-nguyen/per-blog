@@ -16,12 +16,12 @@ export default function HomePage() {
       {/* Hero */}
       <section className="border-b border-ink/10 dark:border-cream/10">
         <div className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-          <p className="rise rise-1 font-mono text-xs tracking-[0.3em] text-vermilion uppercase">
+          <p className="rise rise-1 font-mono text-xs tracking-[0.3em] text-accent uppercase">
             {settings.site_tagline}
           </p>
           <h1 className="rise rise-2 mt-5 max-w-3xl font-display text-5xl leading-[1.05] font-semibold tracking-tight text-ink md:text-7xl dark:text-paper">
             Viết ra là cách tốt nhất để{" "}
-            <em className="text-vermilion not-italic underline decoration-2 underline-offset-8">
+            <em className="text-accent not-italic underline decoration-2 underline-offset-8">
               hiểu
             </em>{" "}
             một vấn đề.
@@ -38,7 +38,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-6xl px-5 py-12">
             <div className="rise rise-3 grid gap-8 md:grid-cols-[1fr_2fr]">
               <div className="flex flex-col justify-between">
-                <span className="inline-block w-fit bg-vermilion px-3 py-1 font-mono text-xs tracking-[0.2em] text-paper uppercase">
+                <span className="inline-block w-fit bg-accent px-3 py-1 font-mono text-xs tracking-[0.2em] text-paper uppercase">
                   Bài nổi bật
                 </span>
                 <div className="mt-6 hidden text-sm text-ink-faint md:block dark:text-cream-faint">
@@ -50,7 +50,7 @@ export default function HomePage() {
               <div className="group relative">
                 <h2 className="font-display text-3xl leading-tight font-semibold text-ink md:text-5xl dark:text-paper">
                   <Link href={`/blog/${featured.slug}`} className="after:absolute after:inset-0">
-                    <span className="bg-gradient-to-r from-vermilion to-vermilion bg-[length:0%_3px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 group-hover:bg-[length:100%_3px]">
+                    <span className="bg-gradient-to-r from-accent to-accent bg-[length:0%_3px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 group-hover:bg-[length:100%_3px]">
                       {featured.title}
                     </span>
                   </Link>
@@ -58,7 +58,7 @@ export default function HomePage() {
                 <p className="mt-4 max-w-2xl leading-relaxed text-ink-soft dark:text-cream-faint">
                   {featured.excerpt}
                 </p>
-                <p className="mt-5 font-mono text-sm text-vermilion">Đọc tiếp ⟶</p>
+                <p className="mt-5 font-mono text-sm text-accent">Đọc tiếp ⟶</p>
               </div>
             </div>
           </div>
@@ -73,7 +73,7 @@ export default function HomePage() {
               <h2 className="font-display text-3xl font-semibold text-ink dark:text-paper">
                 Bài mới
               </h2>
-              <Link href="/blog" className="link-sweep text-sm font-medium text-vermilion">
+              <Link href="/blog" className="link-sweep text-sm font-medium text-accent">
                 Xem tất cả ⟶
               </Link>
             </div>
@@ -95,7 +95,7 @@ export default function HomePage() {
                     href={`/category/${c.slug}`}
                     className="group flex items-baseline justify-between border-b border-ink/10 py-3 text-sm dark:border-cream/10"
                   >
-                    <span className="text-ink-soft transition-colors group-hover:text-vermilion dark:text-cream-faint">
+                    <span className="text-ink-soft transition-colors group-hover:text-accent dark:text-cream-faint">
                       {c.name}
                     </span>
                     <span className="font-mono text-xs text-ink-faint dark:text-cream-faint">
@@ -113,7 +113,7 @@ export default function HomePage() {
               <p className="mt-2 text-sm leading-relaxed text-ink-soft dark:text-cream-faint">
                 {settings.author_bio}
               </p>
-              <Link href="/about" className="link-sweep mt-4 inline-block text-sm text-vermilion">
+              <Link href="/about" className="link-sweep mt-4 inline-block text-sm text-accent">
                 Về tôi ⟶
               </Link>
             </div>

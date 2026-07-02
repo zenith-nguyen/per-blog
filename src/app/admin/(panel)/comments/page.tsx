@@ -57,8 +57,8 @@ export default function AdminCommentsPage() {
             onClick={() => setFilter(value)}
             className={`border px-4 py-2 transition-colors ${
               filter === value
-                ? "border-vermilion bg-vermilion text-paper"
-                : "border-ink/20 text-ink-soft hover:border-vermilion dark:border-cream/20 dark:text-cream-faint"
+                ? "border-accent bg-accent text-paper"
+                : "border-ink/20 text-ink-soft hover:border-accent dark:border-cream/20 dark:text-cream-faint"
             }`}
           >
             {label}
@@ -86,7 +86,7 @@ export default function AdminCommentsPage() {
                 <span
                   className={`px-2 py-0.5 font-mono text-[11px] ${
                     c.status === "pending"
-                      ? "bg-vermilion/15 text-vermilion"
+                      ? "bg-accent/15 text-accent"
                       : c.status === "approved"
                         ? "bg-ink/10 text-ink-soft dark:bg-cream/10 dark:text-cream-faint"
                         : "bg-ink/20 text-ink-faint line-through dark:bg-cream/5 dark:text-cream-faint"
@@ -98,13 +98,13 @@ export default function AdminCommentsPage() {
               <p className="mt-2 text-sm leading-relaxed text-ink-soft dark:text-cream-faint">{c.content}</p>
               <p className="mt-2 text-xs text-ink-faint dark:text-cream-faint">
                 trên{" "}
-                <Link href={`/blog/${c.post_slug}`} target="_blank" className="link-sweep text-vermilion">
+                <Link href={`/blog/${c.post_slug}`} target="_blank" className="link-sweep text-accent">
                   {c.post_title}
                 </Link>
               </p>
               <div className="mt-3 flex gap-3 border-t border-ink/10 pt-3 text-xs dark:border-cream/10">
                 {c.status !== "approved" && (
-                  <button onClick={() => setStatus(c.id, "approved")} className="link-sweep text-vermilion">
+                  <button onClick={() => setStatus(c.id, "approved")} className="link-sweep text-accent">
                     ✓ Duyệt
                   </button>
                 )}
@@ -118,7 +118,7 @@ export default function AdminCommentsPage() {
                     ⚠ Spam
                   </button>
                 )}
-                <button onClick={() => remove(c.id)} className="link-sweep ml-auto text-ink-faint hover:text-vermilion dark:text-cream-faint">
+                <button onClick={() => remove(c.id)} className="link-sweep ml-auto text-ink-faint hover:text-accent dark:text-cream-faint">
                   Xoá vĩnh viễn
                 </button>
               </div>

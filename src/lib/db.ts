@@ -131,7 +131,7 @@ function seedIfEmpty(db: Database.Database) {
   const tx = db.transaction(() => {
     db.prepare(
       "INSERT INTO users (username, password_hash, display_name) VALUES (?, ?, ?)"
-    ).run("admin", hashPassword("admin123"), "Nhật Nguyễn");
+    ).run("nhathuycr123@gmail.com", hashPassword("huinhat_01657"), "Nhật Nguyễn");
 
     const settings: Record<string, string> = {
       site_title: "Mực & Giấy",

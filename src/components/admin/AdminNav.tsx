@@ -26,7 +26,7 @@ export default function AdminNav({ displayName }: { displayName: string }) {
       <div>
         <div className="border-b border-cream/10 px-5 py-5">
           <Link href="/admin" className="font-display text-xl font-semibold text-paper">
-            Mực & Giấy<span className="text-vermilion">.</span>
+            Mực & Giấy<span className="text-accent">.</span>
           </Link>
           <p className="mt-1 font-mono text-[11px] tracking-[0.2em] text-cream-faint uppercase">
             Bảng điều khiển
@@ -42,7 +42,7 @@ export default function AdminNav({ displayName }: { displayName: string }) {
                 href={item.href}
                 className={`flex shrink-0 items-center gap-3 rounded-md px-3 py-2.5 text-sm transition-colors ${
                   active
-                    ? "bg-vermilion text-paper"
+                    ? "bg-accent text-paper"
                     : "text-cream-faint hover:bg-cream/10 hover:text-paper"
                 }`}
               >
@@ -59,7 +59,7 @@ export default function AdminNav({ displayName }: { displayName: string }) {
           <Link href="/" className="link-sweep text-cream-faint hover:text-paper">
             ⟵ Xem blog
           </Link>
-          <button onClick={handleLogout} className="link-sweep text-vermilion">
+          <button onClick={handleLogout} className="link-sweep text-accent">
             Đăng xuất
           </button>
         </div>

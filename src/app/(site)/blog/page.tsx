@@ -53,11 +53,11 @@ export default async function BlogPage({ searchParams }: Props) {
             defaultValue={sp.q ?? ""}
             placeholder="Tìm theo tiêu đề hoặc nội dung…"
             aria-label="Tìm kiếm bài viết"
-            className="w-full border border-ink/25 bg-transparent px-4 py-2.5 text-sm outline-none focus:border-vermilion dark:border-cream/25"
+            className="w-full border border-ink/25 bg-transparent px-4 py-2.5 text-sm outline-none focus:border-accent dark:border-cream/25"
           />
           <button
             type="submit"
-            className="shrink-0 bg-ink px-5 text-sm font-medium text-paper transition-colors hover:bg-vermilion dark:bg-paper dark:text-ink dark:hover:bg-vermilion dark:hover:text-paper"
+            className="shrink-0 bg-ink px-5 text-sm font-medium text-paper transition-colors hover:bg-accent dark:bg-paper dark:text-ink dark:hover:bg-accent dark:hover:text-paper"
           >
             Tìm
           </button>
@@ -69,8 +69,8 @@ export default async function BlogPage({ searchParams }: Props) {
             href={buildQuery({ category: undefined, tag: undefined })}
             className={`border px-3 py-1.5 transition-colors ${
               !sp.category && !sp.tag
-                ? "border-vermilion bg-vermilion text-paper"
-                : "border-ink/20 text-ink-soft hover:border-vermilion dark:border-cream/20 dark:text-cream-faint"
+                ? "border-accent bg-accent text-paper"
+                : "border-ink/20 text-ink-soft hover:border-accent dark:border-cream/20 dark:text-cream-faint"
             }`}
           >
             Tất cả
@@ -81,8 +81,8 @@ export default async function BlogPage({ searchParams }: Props) {
               href={buildQuery({ category: c.slug, tag: undefined })}
               className={`border px-3 py-1.5 transition-colors ${
                 sp.category === c.slug
-                  ? "border-vermilion bg-vermilion text-paper"
-                  : "border-ink/20 text-ink-soft hover:border-vermilion dark:border-cream/20 dark:text-cream-faint"
+                  ? "border-accent bg-accent text-paper"
+                  : "border-ink/20 text-ink-soft hover:border-accent dark:border-cream/20 dark:text-cream-faint"
               }`}
             >
               {c.name}
@@ -95,8 +95,8 @@ export default async function BlogPage({ searchParams }: Props) {
               href={buildQuery({ tag: t.slug, category: undefined })}
               className={`px-2 py-1.5 font-mono transition-colors ${
                 sp.tag === t.slug
-                  ? "text-vermilion underline underline-offset-4"
-                  : "text-ink-faint hover:text-vermilion dark:text-cream-faint"
+                  ? "text-accent underline underline-offset-4"
+                  : "text-ink-faint hover:text-accent dark:text-cream-faint"
               }`}
             >
               #{t.slug}
@@ -110,7 +110,7 @@ export default async function BlogPage({ searchParams }: Props) {
           <p className="font-display text-3xl text-ink-faint dark:text-cream-faint">
             Không tìm thấy bài viết nào.
           </p>
-          <Link href="/blog" className="link-sweep mt-4 inline-block text-vermilion">
+          <Link href="/blog" className="link-sweep mt-4 inline-block text-accent">
             Xoá bộ lọc ⟶
           </Link>
         </div>
@@ -135,8 +135,8 @@ export default async function BlogPage({ searchParams }: Props) {
               aria-current={p === page ? "page" : undefined}
               className={`flex h-9 w-9 items-center justify-center border transition-colors ${
                 p === page
-                  ? "border-vermilion bg-vermilion text-paper"
-                  : "border-ink/20 hover:border-vermilion dark:border-cream/20"
+                  ? "border-accent bg-accent text-paper"
+                  : "border-ink/20 hover:border-accent dark:border-cream/20"
               }`}
             >
               {p}

@@ -20,7 +20,7 @@ export default function ThemeToggle() {
     <button
       onClick={toggle}
       aria-label={dark ? "Chuyển sang giao diện sáng" : "Chuyển sang giao diện tối"}
-      className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/20 text-lg transition-transform hover:rotate-12 hover:border-vermilion dark:border-cream/25"
+      className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/20 text-lg transition-transform hover:rotate-12 hover:border-accent dark:border-cream/25"
     >
       <span aria-hidden>{dark === null ? "◐" : dark ? "☾" : "☀"}</span>
     </button>

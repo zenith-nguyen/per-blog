@@ -31,7 +31,7 @@ export default function AdminDashboard() {
         </div>
         <Link
           href="/admin/posts/new"
-          className="bg-vermilion px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-vermilion-deep"
+          className="bg-accent px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-accent-deep"
         >
           + Viết bài mới
         </Link>
@@ -68,7 +68,7 @@ export default function AdminDashboard() {
           <ol className="space-y-3">
             {stats.topPosts.map((p, i) => (
               <li key={p.id} className="flex items-baseline gap-3 border-b border-ink/10 pb-3 dark:border-cream/10">
-                <span className="font-mono text-sm text-vermilion">{String(i + 1).padStart(2, "0")}</span>
+                <span className="font-mono text-sm text-accent">{String(i + 1).padStart(2, "0")}</span>
                 <Link href={`/blog/${p.slug}`} className="link-sweep min-w-0 flex-1 truncate text-sm text-ink dark:text-paper">
                   {p.title}
                 </Link>
@@ -92,7 +92,7 @@ export default function AdminDashboard() {
                   <span
                     className={`px-2 py-0.5 font-mono text-[11px] ${
                       c.status === "pending"
-                        ? "bg-vermilion/15 text-vermilion"
+                        ? "bg-accent/15 text-accent"
                         : c.status === "approved"
                           ? "bg-ink/10 text-ink-soft dark:bg-cream/10 dark:text-cream-faint"
                           : "bg-ink/20 text-ink-faint line-through dark:bg-cream/5 dark:text-cream-faint"
@@ -108,7 +108,7 @@ export default function AdminDashboard() {
               </li>
             ))}
           </ul>
-          <Link href="/admin/comments" className="link-sweep mt-4 inline-block text-sm text-vermilion">
+          <Link href="/admin/comments" className="link-sweep mt-4 inline-block text-sm text-accent">
             Quản lý bình luận ⟶
           </Link>
         </section>

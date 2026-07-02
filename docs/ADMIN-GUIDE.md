@@ -5,7 +5,7 @@ Dành cho tác giả blog — không cần kiến thức kỹ thuật.
 ## 1. Đăng nhập
 
 1. Mở `http://localhost:3000/admin` (hoặc bấm link **Quản trị** ở chân trang blog).
-2. Nhập tài khoản — mặc định `admin` / `admin123`.
+2. Nhập email và mật khẩu quản trị (khai báo trong seed `src/lib/db.ts`).
 3. Phiên đăng nhập giữ 7 ngày; bấm **Đăng xuất** ở cuối sidebar khi dùng máy chung.
 
 ## 2. Màn hình Tổng quan (báo cáo)
@@ -59,7 +59,7 @@ Trang **Cài đặt** đổi được: tên blog, khẩu hiệu, mô tả, tên 
 
 ## 7. Câu hỏi thường gặp
 
-**Đổi mật khẩu thế nào?** Hiện chưa có UI đổi mật khẩu. Cách làm: sửa mật khẩu seed trong `src/lib/db.ts` (dòng `hashPassword("admin123")`) rồi chạy `npm run db:seed` — *lưu ý lệnh này xoá toàn bộ dữ liệu*. Nếu muốn giữ dữ liệu, nhờ người kỹ thuật chạy update trực tiếp vào bảng `users`.
+**Đổi mật khẩu thế nào?** Hiện chưa có UI đổi mật khẩu. Cách làm: sửa mật khẩu seed trong `src/lib/db.ts` (dòng gọi `hashPassword(...)`) rồi chạy `npm run db:seed` — *lưu ý lệnh này xoá toàn bộ dữ liệu*. Nếu muốn giữ dữ liệu, nhờ người kỹ thuật chạy update trực tiếp vào bảng `users`.
 
 **Lỡ xoá bài quan trọng?** Không có thùng rác — hãy khôi phục từ file backup `data/blog.db` gần nhất. Nên backup định kỳ (copy 1 file duy nhất).
 

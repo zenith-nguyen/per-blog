@@ -43,7 +43,7 @@ export default function AdminPostsPage() {
         </div>
         <Link
           href="/admin/posts/new"
-          className="bg-vermilion px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-vermilion-deep"
+          className="bg-accent px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-accent-deep"
         >
           + Viết bài mới
         </Link>
@@ -56,7 +56,7 @@ export default function AdminPostsPage() {
           aria-label="Tìm bài viết"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-64 border border-ink/20 bg-transparent px-3 py-2 text-sm outline-none focus:border-vermilion dark:border-cream/20"
+          className="w-64 border border-ink/20 bg-transparent px-3 py-2 text-sm outline-none focus:border-accent dark:border-cream/20"
         />
         <div className="flex text-xs">
           {(
@@ -71,8 +71,8 @@ export default function AdminPostsPage() {
               onClick={() => setStatus(value)}
               className={`border px-4 py-2 transition-colors ${
                 status === value
-                  ? "border-vermilion bg-vermilion text-paper"
-                  : "border-ink/20 text-ink-soft hover:border-vermilion dark:border-cream/20 dark:text-cream-faint"
+                  ? "border-accent bg-accent text-paper"
+                  : "border-ink/20 text-ink-soft hover:border-accent dark:border-cream/20 dark:text-cream-faint"
               }`}
             >
               {label}
@@ -107,7 +107,7 @@ export default function AdminPostsPage() {
                       {p.title}
                     </Link>
                     {!!p.featured && (
-                      <span className="ml-2 bg-vermilion/15 px-1.5 py-0.5 font-mono text-[10px] text-vermilion">
+                      <span className="ml-2 bg-accent/15 px-1.5 py-0.5 font-mono text-[10px] text-accent">
                         NỔI BẬT
                       </span>
                     )}
@@ -123,7 +123,7 @@ export default function AdminPostsPage() {
                       className={`px-2 py-1 font-mono text-[11px] ${
                         p.status === "published"
                           ? "bg-ink/10 text-ink-soft dark:bg-cream/10 dark:text-cream-faint"
-                          : "bg-vermilion/15 text-vermilion"
+                          : "bg-accent/15 text-accent"
                       }`}
                     >
                       {p.status === "published" ? "Đã đăng" : "Nháp"}
@@ -139,10 +139,10 @@ export default function AdminPostsPage() {
                           Xem
                         </Link>
                       )}
-                      <Link href={`/admin/posts/${p.id}`} className="link-sweep text-vermilion">
+                      <Link href={`/admin/posts/${p.id}`} className="link-sweep text-accent">
                         Sửa
                       </Link>
-                      <button onClick={() => remove(p)} className="link-sweep text-ink-faint hover:text-vermilion dark:text-cream-faint">
+                      <button onClick={() => remove(p)} className="link-sweep text-ink-faint hover:text-accent dark:text-cream-faint">
                         Xoá
                       </button>
                     </div>

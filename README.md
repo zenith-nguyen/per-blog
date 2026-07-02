@@ -16,7 +16,7 @@ Lần chạy đầu tiên, database `data/blog.db` được tự tạo kèm **d�
 | `http://localhost:3000` | Website blog public |
 | `http://localhost:3000/admin` | Phần mềm quản trị |
 
-**Tài khoản admin mặc định:** `admin` / `admin123` — đổi mật khẩu bằng cách sửa seed trong `src/lib/db.ts` rồi chạy `npm run db:seed` (xoá DB, tạo lại).
+**Tài khoản admin:** cấu hình trong seed tại `src/lib/db.ts` (username là email của bạn) — đổi mật khẩu bằng cách sửa seed trong `src/lib/db.ts` rồi chạy `npm run db:seed` (xoá DB, tạo lại).
 
 ## Lệnh có sẵn
 

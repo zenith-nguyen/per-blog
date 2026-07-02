@@ -40,7 +40,7 @@ export default async function PostPage({ params }: Props) {
           {post.category_slug && (
             <Link
               href={`/category/${post.category_slug}`}
-              className="bg-vermilion px-2.5 py-1 text-paper"
+              className="bg-accent px-2.5 py-1 text-paper"
             >
               {post.category_name}
             </Link>
@@ -79,7 +79,7 @@ export default async function PostPage({ params }: Props) {
             <Link
               key={t.id}
               href={`/tag/${t.slug}`}
-              className="border border-ink/20 px-3 py-1 font-mono text-xs text-ink-soft transition-colors hover:border-vermilion hover:text-vermilion dark:border-cream/20 dark:text-cream-faint"
+              className="border border-ink/20 px-3 py-1 font-mono text-xs text-ink-soft transition-colors hover:border-accent hover:text-accent dark:border-cream/20 dark:text-cream-faint"
             >
               #{t.slug}
             </Link>

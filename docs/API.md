@@ -23,7 +23,7 @@ Base URL: `http://localhost:3000`. Tất cả request/response dùng JSON, UTF-8
 ## 1. Auth
 
 ### POST `/api/auth/login`
-Body: `{ "username": "admin", "password": "admin123" }`
+Body: `{ "username": "<email đăng nhập>", "password": "<mật khẩu>" }` — tài khoản khai báo trong seed (`src/lib/db.ts`).
 - `200` → `{ "ok": true }` + Set-Cookie `blog_session`
 - `401 INVALID_CREDENTIALS`
 
@@ -149,7 +149,7 @@ JAR=/tmp/blog-cookies.txt
 
 # Đăng nhập, lưu cookie
 curl -c $JAR -X POST localhost:3000/api/auth/login \
-  -H 'Content-Type: application/json' -d '{"username":"admin","password":"admin123"}'
+  -H 'Content-Type: application/json' -d '{"username":"<email>","password":"<mật khẩu>"}'
 
 # Tạo bài
 curl -b $JAR -X POST localhost:3000/api/admin/posts \

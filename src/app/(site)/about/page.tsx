@@ -9,7 +9,7 @@ export default function AboutPage() {
 
   return (
     <div className="mx-auto max-w-3xl px-5 py-16">
-      <p className="rise rise-1 font-mono text-xs tracking-[0.3em] text-vermilion uppercase">
+      <p className="rise rise-1 font-mono text-xs tracking-[0.3em] text-accent uppercase">
         Về tôi
       </p>
       <h1 className="rise rise-2 mt-4 font-display text-5xl leading-tight font-semibold tracking-tight text-ink md:text-6xl dark:text-paper">
@@ -33,7 +33,7 @@ export default function AboutPage() {
             href={settings.social_github}
             target="_blank"
             rel="noreferrer"
-            className="border border-ink/25 px-5 py-2.5 transition-colors hover:border-vermilion hover:text-vermilion dark:border-cream/25"
+            className="border border-ink/25 px-5 py-2.5 transition-colors hover:border-accent hover:text-accent dark:border-cream/25"
           >
             GitHub ⟶
           </a>
@@ -41,7 +41,7 @@ export default function AboutPage() {
         {settings.social_email && (
           <a
             href={`mailto:${settings.social_email}`}
-            className="border border-ink/25 px-5 py-2.5 transition-colors hover:border-vermilion hover:text-vermilion dark:border-cream/25"
+            className="border border-ink/25 px-5 py-2.5 transition-colors hover:border-accent hover:text-accent dark:border-cream/25"
           >
             Gửi email ⟶
           </a>

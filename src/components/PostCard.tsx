@@ -13,7 +13,7 @@ export default function PostCard({ post, index }: { post: Post; index?: number }
       <div className="mb-3 flex items-baseline justify-between gap-3 text-xs tracking-[0.14em] text-ink-faint uppercase dark:text-cream-faint">
         <span>
           {typeof index === "number" && (
-            <span className="mr-2 font-mono text-vermilion">
+            <span className="mr-2 font-mono text-accent">
               {String(index + 1).padStart(2, "0")}
             </span>
           )}
@@ -24,7 +24,7 @@ export default function PostCard({ post, index }: { post: Post; index?: number }
 
       <h3 className="font-display text-2xl leading-snug font-semibold text-ink dark:text-paper">
         <Link href={`/blog/${post.slug}`} className="after:absolute after:inset-0">
-          <span className="bg-gradient-to-r from-vermilion to-vermilion bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 group-hover:bg-[length:100%_2px]">
+          <span className="bg-gradient-to-r from-accent to-accent bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 group-hover:bg-[length:100%_2px]">
             {post.title}
           </span>
         </Link>
@@ -40,7 +40,7 @@ export default function PostCard({ post, index }: { post: Post; index?: number }
         <span>{post.views.toLocaleString("vi-VN")} lượt xem</span>
         <span
           aria-hidden
-          className="ml-auto translate-x-0 text-vermilion transition-transform duration-300 group-hover:translate-x-1.5"
+          className="ml-auto translate-x-0 text-accent transition-transform duration-300 group-hover:translate-x-1.5"
         >
           ⟶
         </span>

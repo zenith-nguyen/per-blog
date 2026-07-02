@@ -41,7 +41,7 @@ export default function CommentSection({
     <section className="mt-16 border-t-2 border-ink/80 pt-8 dark:border-cream/60">
       <h2 className="font-display text-2xl font-semibold text-ink dark:text-paper">
         Bình luận{" "}
-        <span className="font-mono text-base text-vermilion">({initialComments.length})</span>
+        <span className="font-mono text-base text-accent">({initialComments.length})</span>
       </h2>
 
       <div className="mt-6 space-y-6">
@@ -51,7 +51,7 @@ export default function CommentSection({
           </p>
         )}
         {initialComments.map((c) => (
-          <div key={c.id} className="border-l-2 border-vermilion/40 pl-4">
+          <div key={c.id} className="border-l-2 border-accent/40 pl-4">
             <p className="text-sm font-semibold text-ink dark:text-paper">
               {c.author_name}
               <span className="ml-3 text-xs font-normal text-ink-faint dark:text-cream-faint">
@@ -66,7 +66,7 @@ export default function CommentSection({
       </div>
 
       {state === "sent" ? (
-        <p className="mt-8 border border-vermilion/40 bg-vermilion/5 p-4 text-sm text-vermilion-deep dark:text-vermilion">
+        <p className="mt-8 border border-accent/40 bg-accent/5 p-4 text-sm text-accent-deep dark:text-accent">
           Cảm ơn bạn! Bình luận sẽ hiển thị sau khi được duyệt.
         </p>
       ) : (
@@ -81,7 +81,7 @@ export default function CommentSection({
               maxLength={80}
               value={author}
               onChange={(e) => setAuthor(e.target.value)}
-              className="w-full border border-ink/20 bg-transparent px-3 py-2.5 text-sm outline-none focus:border-vermilion dark:border-cream/20"
+              className="w-full border border-ink/20 bg-transparent px-3 py-2.5 text-sm outline-none focus:border-accent dark:border-cream/20"
             />
           </div>
           <div>
@@ -95,14 +95,14 @@ export default function CommentSection({
               maxLength={2000}
               value={content}
               onChange={(e) => setContent(e.target.value)}
-              className="w-full resize-y border border-ink/20 bg-transparent px-3 py-2.5 text-sm outline-none focus:border-vermilion dark:border-cream/20"
+              className="w-full resize-y border border-ink/20 bg-transparent px-3 py-2.5 text-sm outline-none focus:border-accent dark:border-cream/20"
             />
           </div>
-          {error && <p className="text-sm text-vermilion">{error}</p>}
+          {error && <p className="text-sm text-accent">{error}</p>}
           <button
             type="submit"
             disabled={state === "sending"}
-            className="bg-ink px-6 py-2.5 text-sm font-medium tracking-wide text-paper transition-colors hover:bg-vermilion disabled:opacity-50 dark:bg-paper dark:text-ink dark:hover:bg-vermilion dark:hover:text-paper"
+            className="bg-ink px-6 py-2.5 text-sm font-medium tracking-wide text-paper transition-colors hover:bg-accent disabled:opacity-50 dark:bg-paper dark:text-ink dark:hover:bg-accent dark:hover:text-paper"
           >
             {state === "sending" ? "Đang gửi…" : "Gửi bình luận"}
           </button>

@@ -96,7 +96,7 @@ export default function PostEditor({ post }: Props) {
   }
 
   const inputCls =
-    "w-full border border-ink/20 bg-transparent px-3 py-2.5 text-sm outline-none focus:border-vermilion dark:border-cream/20";
+    "w-full border border-ink/20 bg-transparent px-3 py-2.5 text-sm outline-none focus:border-accent dark:border-cream/20";
   const labelCls =
     "mb-1.5 block text-xs tracking-[0.14em] uppercase text-ink-faint dark:text-cream-faint";
 
@@ -147,14 +147,14 @@ export default function PostEditor({ post }: Props) {
               <button
                 type="button"
                 onClick={() => setTab("write")}
-                className={`border px-4 py-2 ${tab === "write" ? "border-vermilion bg-vermilion text-paper" : "border-ink/20 dark:border-cream/20"}`}
+                className={`border px-4 py-2 ${tab === "write" ? "border-accent bg-accent text-paper" : "border-ink/20 dark:border-cream/20"}`}
               >
                 ✎ Viết (Markdown)
               </button>
               <button
                 type="button"
                 onClick={() => setTab("preview")}
-                className={`border px-4 py-2 ${tab === "preview" ? "border-vermilion bg-vermilion text-paper" : "border-ink/20 dark:border-cream/20"}`}
+                className={`border px-4 py-2 ${tab === "preview" ? "border-accent bg-accent text-paper" : "border-ink/20 dark:border-cream/20"}`}
               >
                 ◫ Xem trước
               </button>
@@ -181,7 +181,7 @@ export default function PostEditor({ post }: Props) {
           )}
         </div>
 
-        {error && <p className="border border-vermilion/40 bg-vermilion/5 p-3 text-sm text-vermilion">{error}</p>}
+        {error && <p className="border border-accent/40 bg-accent/5 p-3 text-sm text-accent">{error}</p>}
       </div>
 
       {/* Sidebar */}
@@ -192,14 +192,14 @@ export default function PostEditor({ post }: Props) {
             <button
               onClick={() => save("published")}
               disabled={busy}
-              className="w-full bg-vermilion py-2.5 text-sm font-medium text-paper transition-colors hover:bg-vermilion-deep disabled:opacity-50"
+              className="w-full bg-accent py-2.5 text-sm font-medium text-paper transition-colors hover:bg-accent-deep disabled:opacity-50"
             >
               {busy ? "Đang lưu…" : post?.status === "published" ? "Cập nhật" : "Đăng bài"}
             </button>
             <button
               onClick={() => save("draft")}
               disabled={busy}
-              className="w-full border border-ink/25 py-2.5 text-sm transition-colors hover:border-vermilion disabled:opacity-50 dark:border-cream/25"
+              className="w-full border border-ink/25 py-2.5 text-sm transition-colors hover:border-accent disabled:opacity-50 dark:border-cream/25"
             >
               Lưu nháp
             </button>
@@ -209,7 +209,7 @@ export default function PostEditor({ post }: Props) {
               type="checkbox"
               checked={featured}
               onChange={(e) => setFeatured(e.target.checked)}
-              className="accent-vermilion"
+              className="accent-accent"
             />
             Đánh dấu nổi bật
           </label>
@@ -238,8 +238,8 @@ export default function PostEditor({ post }: Props) {
                 onClick={() => toggleTag(t.id)}
                 className={`border px-2.5 py-1 font-mono text-xs transition-colors ${
                   tagIds.includes(t.id)
-                    ? "border-vermilion bg-vermilion text-paper"
-                    : "border-ink/20 text-ink-soft hover:border-vermilion dark:border-cream/20 dark:text-cream-faint"
+                    ? "border-accent bg-accent text-paper"
+                    : "border-ink/20 text-ink-soft hover:border-accent dark:border-cream/20 dark:text-cream-faint"
                 }`}
               >
                 #{t.slug}

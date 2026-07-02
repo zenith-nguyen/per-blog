@@ -23,7 +23,7 @@ export default function Header({ siteTitle }: { siteTitle: string }) {
           className="font-display text-2xl font-semibold tracking-tight text-ink dark:text-paper"
         >
           {siteTitle}
-          <span className="text-vermilion">.</span>
+          <span className="text-accent">.</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Điều hướng chính">
@@ -35,7 +35,7 @@ export default function Header({ siteTitle }: { siteTitle: string }) {
                 key={item.href}
                 href={item.href}
                 className={`link-sweep text-sm font-medium uppercase tracking-[0.14em] ${
-                  active ? "text-vermilion" : "text-ink-soft dark:text-cream-faint"
+                  active ? "text-accent" : "text-ink-soft dark:text-cream-faint"
                 }`}
               >
                 {item.label}

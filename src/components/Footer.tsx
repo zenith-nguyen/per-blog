@@ -8,7 +8,7 @@ export default function Footer({ settings }: { settings: SiteSettings }) {
         <div>
           <p className="font-display text-xl font-semibold text-ink dark:text-paper">
             {settings.site_title}
-            <span className="text-vermilion">.</span>
+            <span className="text-accent">.</span>
           </p>
           <p className="mt-1 max-w-md text-sm text-ink-faint dark:text-cream-faint">
             {settings.site_tagline}

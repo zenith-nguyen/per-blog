@@ -106,6 +106,6 @@ Ghi chú thiết kế: giữ **cả** `posts.views` (tổng, sort top-posts O(1)
 
 ## Seed & Reset
 
-- **Lần chạy đầu** (bảng `users` trống): tạo admin (`admin`/`admin123`), settings, 4 chuyên mục, 8 thẻ, 8 bài viết mẫu (7 published + 1 draft), 5 bình luận (đủ 3 trạng thái), và lịch sử lượt xem 45 ngày (giả lập deterministic — có nhịp cuối tuần).
+- **Lần chạy đầu** (bảng `users` trống): tạo tài khoản admin (khai báo trong `src/lib/db.ts`), settings, 4 chuyên mục, 8 thẻ, 8 bài viết mẫu (7 published + 1 draft), 5 bình luận (đủ 3 trạng thái), và lịch sử lượt xem 45 ngày (giả lập deterministic — có nhịp cuối tuần).
 - **Reset:** `npm run db:seed` xoá `data/blog.db*` → lần `npm run dev` kế tiếp seed lại.
 - **Backup:** copy `data/blog.db` (nên dừng server hoặc copy kèm `-wal`).

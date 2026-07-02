@@ -21,8 +21,8 @@ export default function ViewsChart({ data }: { data: { date: string; count: numb
     >
       <defs>
         <linearGradient id="viewsFill" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#c2401c" stopOpacity="0.35" />
-          <stop offset="100%" stopColor="#c2401c" stopOpacity="0.02" />
+          <stop offset="0%" stopColor="var(--color-accent)" stopOpacity="0.35" />
+          <stop offset="100%" stopColor="var(--color-accent)" stopOpacity="0.02" />
         </linearGradient>
       </defs>
       {[0.25, 0.5, 0.75].map((f) => (
@@ -37,10 +37,10 @@ export default function ViewsChart({ data }: { data: { date: string; count: numb
         />
       ))}
       <path d={area} fill="url(#viewsFill)" />
-      <path d={line} fill="none" stroke="#c2401c" strokeWidth="2.5" strokeLinejoin="round" />
+      <path d={line} fill="none" stroke="var(--color-accent)" strokeWidth="2.5" strokeLinejoin="round" />
       {points.map((p, i) =>
         i === points.length - 1 ? (
-          <circle key={i} cx={p.x} cy={p.y} r="4.5" fill="#c2401c" />
+          <circle key={i} cx={p.x} cy={p.y} r="4.5" fill="var(--color-accent)" />
         ) : null
       )}
     </svg>

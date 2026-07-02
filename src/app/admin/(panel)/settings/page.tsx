@@ -43,7 +43,7 @@ export default function AdminSettingsPage() {
   }
 
   const inputCls =
-    "w-full border border-ink/20 bg-transparent px-3 py-2.5 text-sm outline-none focus:border-vermilion dark:border-cream/20";
+    "w-full border border-ink/20 bg-transparent px-3 py-2.5 text-sm outline-none focus:border-accent dark:border-cream/20";
 
   return (
     <div className="mx-auto max-w-2xl">
@@ -80,11 +80,11 @@ export default function AdminSettingsPage() {
           <button
             type="submit"
             disabled={state === "saving"}
-            className="bg-vermilion px-6 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-vermilion-deep disabled:opacity-50"
+            className="bg-accent px-6 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-accent-deep disabled:opacity-50"
           >
             {state === "saving" ? "Đang lưu…" : "Lưu cài đặt"}
           </button>
-          {state === "saved" && <span className="text-sm text-vermilion">✓ Đã lưu</span>}
+          {state === "saved" && <span className="text-sm text-accent">✓ Đã lưu</span>}
         </div>
       </form>
     </div>

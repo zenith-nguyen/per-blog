@@ -33,11 +33,11 @@ export default function AdminLoginPage() {
   return (
     <div className="flex min-h-screen items-center justify-center px-5">
       <div className="rise w-full max-w-sm">
-        <p className="text-center font-mono text-xs tracking-[0.3em] text-vermilion uppercase">
+        <p className="text-center font-mono text-xs tracking-[0.3em] text-accent uppercase">
           Khu vực quản trị
         </p>
         <h1 className="mt-3 text-center font-display text-4xl font-semibold text-ink dark:text-paper">
-          Mực & Giấy<span className="text-vermilion">.</span>
+          Mực & Giấy<span className="text-accent">.</span>
         </h1>
 
         <form
@@ -46,7 +46,7 @@ export default function AdminLoginPage() {
         >
           <div>
             <label htmlFor="username" className="mb-1.5 block text-xs tracking-[0.14em] uppercase text-ink-faint dark:text-cream-faint">
-              Tên đăng nhập
+              Email đăng nhập
             </label>
             <input
               id="username"
@@ -54,7 +54,7 @@ export default function AdminLoginPage() {
               required
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="w-full border border-ink/20 bg-paper px-3 py-2.5 text-sm outline-none focus:border-vermilion dark:border-cream/20 dark:bg-night"
+              className="w-full border border-ink/20 bg-paper px-3 py-2.5 text-sm outline-none focus:border-accent dark:border-cream/20 dark:bg-night"
             />
           </div>
           <div>
@@ -68,20 +68,17 @@ export default function AdminLoginPage() {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full border border-ink/20 bg-paper px-3 py-2.5 text-sm outline-none focus:border-vermilion dark:border-cream/20 dark:bg-night"
+              className="w-full border border-ink/20 bg-paper px-3 py-2.5 text-sm outline-none focus:border-accent dark:border-cream/20 dark:bg-night"
             />
           </div>
-          {error && <p className="text-sm text-vermilion">{error}</p>}
+          {error && <p className="text-sm text-accent">{error}</p>}
           <button
             type="submit"
             disabled={busy}
-            className="w-full bg-ink py-3 text-sm font-medium tracking-wide text-paper transition-colors hover:bg-vermilion disabled:opacity-50 dark:bg-paper dark:text-ink dark:hover:bg-vermilion dark:hover:text-paper"
+            className="w-full bg-ink py-3 text-sm font-medium tracking-wide text-paper transition-colors hover:bg-accent disabled:opacity-50 dark:bg-paper dark:text-ink dark:hover:bg-accent dark:hover:text-paper"
           >
             {busy ? "Đang đăng nhập…" : "Đăng nhập"}
           </button>
-          <p className="text-center text-xs text-ink-faint dark:text-cream-faint">
-            Mặc định: <code className="font-mono">admin / admin123</code>
-          </p>
         </form>
       </div>
     </div>

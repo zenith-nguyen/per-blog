@@ -45,7 +45,7 @@ Lần chạy đầu tiên, database `data/blog.db` được tự tạo kèm **d�
 
 ## Công nghệ
 
-Next.js 15 (App Router) · React 19 · TypeScript strict · Tailwind CSS v4 · SQLite (better-sqlite3, WAL mode) · marked (Markdown)
+Next.js 15 (App Router) · React 19 · TypeScript strict · Tailwind CSS v4 · SQLite (better-sqlite3, WAL mode) · marked (Markdown) · GitHub Actions CI (type-check + build + smoke test)
 
 Font: **Fraunces** (display) + **Be Vietnam Pro** (body) + **JetBrains Mono** — đều hỗ trợ đầy đủ tiếng Việt.
 
@@ -53,6 +53,7 @@ Font: **Fraunces** (display) + **Be Vietnam Pro** (body) + **JetBrains Mono** �
 
 | Tài liệu | Nội dung |
 |---|---|
+| [docs/OVERVIEW.md](docs/OVERVIEW.md) | **Đọc đầu tiên** — tổng quan nền tảng: công nghệ, nghiệp vụ, kết nối, admin, cách dùng |
 | [docs/BUSINESS.md](docs/BUSINESS.md) | Nghiệp vụ: đối tượng, luồng công việc, quy tắc nghiệp vụ |
 | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Kiến trúc code: cấu trúc thư mục, tầng, luồng dữ liệu, quyết định thiết kế |
 | [docs/API.md](docs/API.md) | Đặc tả toàn bộ REST API (public + admin) |

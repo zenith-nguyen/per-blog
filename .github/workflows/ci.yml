@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: Type-check & Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type-check
+        run: npx tsc --noEmit
+
+      - name: Build production
+        run: npm run build
+
+      - name: Smoke test — server boots and seeds database
+        run: |
+          npm start &
+          SERVER_PID=$!
+          for i in $(seq 1 30); do
+            if curl -sf http://localhost:3000/ > /dev/null; then break; fi
+            sleep 1
+          done
+          curl -sf http://localhost:3000/ > /dev/null
+          curl -sf http://localhost:3000/blog > /dev/null
+          curl -sf -o /dev/null -w "%{http_code}" http://localhost:3000/api/admin/stats | grep -q 401
+          kill $SERVER_PID
+          echo "Smoke test passed"

@@ -59,6 +59,8 @@ Font: **Fraunces** (display) + **Be Vietnam Pro** (body) + **JetBrains Mono** �
 | [docs/API.md](docs/API.md) | Đặc tả toàn bộ REST API (public + admin) |
 | [docs/DATABASE.md](docs/DATABASE.md) | Schema SQLite, quan hệ, index, quy ước |
 | [docs/ADMIN-GUIDE.md](docs/ADMIN-GUIDE.md) | Hướng dẫn sử dụng phần mềm quản trị từng bước |
+| [docs/DESIGN-GUIDE.md](docs/DESIGN-GUIDE.md) | Guideline UI/UX: theme, màu, typography, motion, component pattern, format |
+| [docs/AI-GUIDE.md](docs/AI-GUIDE.md) | Kim chỉ nam cho AI/dev code tiếp: luật kiến trúc, quy ước, bẫy đã gặp (kèm `CLAUDE.md` ở gốc repo) |
 
 ## Cấu trúc thư mục (rút gọn)
 

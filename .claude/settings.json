@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev*)",
+      "Bash(npm run build*)",
+      "Bash(npm run db:seed*)",
+      "Bash(npm install*)",
+      "Bash(npx tsc*)",
+      "Bash(curl -s*localhost:3000*)",
+      "Bash(sqlite3 data/blog.db *)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git add *)",
+      "Bash(git commit*)"
+    ],
+    "deny": [
+      "Read(./data/blog.db)",
+      "Bash(git push --force*)",
+      "Bash(rm -rf *)"
+    ]
+  }
+}

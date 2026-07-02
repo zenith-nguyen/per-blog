@@ -4,7 +4,12 @@
 > Đọc file này TRƯỚC KHI viết bất kỳ dòng code nào. Làm theo đúng các quy ước dưới đây
 > để code mới không lệch hướng với code hiện có.
 
-## 0. Đọc gì trước khi làm gì
+## 0. Đồ nghề có sẵn
+
+Repo có **project skills** trong `.claude/skills/` (Claude Code tự nhận; AI khác đọc như tài liệu quy trình):
+`verify` (kiểm tra trước khi xong task) · `add-feature` (recipe scaffold 4 loại) · `design-review` (soát UI theo theme) · `db-ops` (reset/backup/đổi mật khẩu DB). Kèm `.claude/settings.json` (allowlist lệnh an toàn) và `.claude/launch.json` (chạy dev server cho preview).
+
+## 0b. Đọc gì trước khi làm gì
 
 | Bạn định làm | Đọc trước |
 |---|---|

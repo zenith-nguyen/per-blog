@@ -5,6 +5,15 @@ Blog cá nhân tiếng Việt + admin CMS. Next.js 15 App Router, TypeScript str
 **BẮT BUỘC đọc trước khi code: [docs/AI-GUIDE.md](docs/AI-GUIDE.md)** — luật kiến trúc, quy tắc nghiệp vụ, các bẫy đã gặp, pattern chuẩn.
 **Trước khi sửa bất kỳ UI nào: [docs/DESIGN-GUIDE.md](docs/DESIGN-GUIDE.md)** — theme navy/giấy, token màu, typography, component pattern, format vi-VN.
 
+## Project skills (trong `.claude/skills/`)
+
+| Skill | Khi nào dùng |
+|---|---|
+| `verify` | LUÔN chạy trước khi kết thúc task: tsc → build → smoke test → soi UI 2 theme |
+| `add-feature` | Thêm trang public / trang admin / API / bảng DB — có recipe từng loại |
+| `design-review` | Sau khi sửa UI, hoặc khi giao diện "lệch theme" — lệnh quét + checklist |
+| `db-ops` | Reset / backup / soi dữ liệu / đổi mật khẩu admin giữ dữ liệu |
+
 ## Lệnh
 
 ```bash
